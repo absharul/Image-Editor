@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        style="@style/Base.CardView"
+        android:background="#E6E5E5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/ed_IMG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:text="Editor"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/back_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/ed_IMG"
+        android:layout_width="272dp"
+        android:layout_height="411dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="248dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:textColor="@color/white"
+        android:backgroundTint="#00BCD4"
+        android:id="@+id/bt_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="167dp"
+        android:text="Rotate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_flip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_IMG" />
+
+    <Button
+        android:textColor="@color/white"
+        android:backgroundTint="#00BCD4"
+        android:id="@+id/bt_flip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="168dp"
+        android:text="Flip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_IMG" />
+
+    <Button
+        android:textColor="@color/white"
+        android:backgroundTint="#00BCD4"
+        android:id="@+id/bt_crop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="166dp"
+        android:text="crop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_flip"
+        app:layout_constraintTop_toBottomOf="@+id/ed_IMG" />
+
+    <Button
+        android:id="@+id/bt_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#1D6337"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_flip"
+        app:layout_constraintVertical_bias="0.698" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="303dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="#FBFBFB"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_final"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_flip">
+
+        <ImageView
+            android:id="@+id/img_heart"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:src="@drawable/user_image_frame_1" />
+
+        <ImageView
+            android:id="@+id/img_square"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/user_image_frame_2" />
+
+        <ImageView
+            android:id="@+id/img_circle"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="165dp"
+            android:src="@drawable/user_image_frame_3" />
+
+        <ImageView
+            android:id="@+id/img_rectangle"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="230dp"
+            android:src="@drawable/user_image_frame_4" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
